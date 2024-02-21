@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Form</title>
+    <link rel="stylesheet" href="../CSS/style.css" type="text/css">
+    <link rel="stylesheet" href="../fontawesome-free-6.2.1-web/css/all.min.css">
+</head>
+<body >
+    <div class="container">
+        <div class="form-name">Sign Up</div>
+        <div>
+            <form id="signup-form">
+                <div class="field-name-block">
+                    <label class="field-name" for="firstName">First Name</label>
+                </div>
+                <div class="field-input-block">
+                    <input id="firstName" type="text" placeholder="First Name" pattern="^[a-zA-Z ]*$" maxlength="15" />
+                    <div id="firstNameWarning" ></div>
+                </div>
+                <div class="field-name-block">
+                    <label class="field-name">Last Name</label>
+                </div>
+                <div class="field-input-block">
+                    <input id="lastName" type="text" placeholder="last Name" pattern="^[a-zA-Z ]*$"  maxlength="15" />
+                    <div id="lastNameWarning"></div>
+                </div>
+                <div class="field-name-block">
+                    <label class="field-name">Email</label>
+                </div>
+                <div class="field-input-block">
+                    <input id="email" type="text" placeholder="email@example.com" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"/>
+                    <div id="emailWarning"></div>
+                </div>
+                <div class="field-name-block">
+                    <label class="field-name">Mobile</label>
+                </div>
+                <div class="field-input-block">
+                    <input id="mobile" type="text" placeholder="0000000000" pattern="^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$" maxlength="10"/>
+                    <div id="mobileWarning"></div>
+                </div> 
+                <div class="field-name-block">
+                    <label class="field-name">Create Password</label>
+                </div>
+                <div class="field-input-block">
+                    <input id="createPW" type="password" placeholder="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$" maxlength="20"/>
+                    <!-- 8 to 15 characters which contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character -->
+                    <div id="createWarning"></div>
+                </div>
+                <div class="field-name-block">
+                    <label class="field-name">Confirm Password</label>
+                </div>
+                <div class="field-input-block">
+                    <input id="confirmPW" type="password" placeholder="password" maxlength="20"/>
+                    <div id="confirmWarning"></div>
+                </div>
+                <div class="buttons-block">
+                    <input type="button" value="Sign Up" class="button" onclick="onSubmitClick()">
+                    <input type="reset" value="Cancel" class="button">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script  src="../JS/script.js"></script>
+</body>
+</html>
